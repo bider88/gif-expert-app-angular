@@ -1,0 +1,5 @@
+<h3>{{ category }}</h3>
+<p *ngIf="loading">Cargando...</p>
+<div class="gif-grid animate__animated animate__fadeIn">
+  <app-gif-grid-item *ngFor="let image of images" [image]="image"></app-gif-grid-item>
+</div>

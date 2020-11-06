@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gif-expert-angular';
+  categories: string[] = ['Dragon Ball'];
+
+  addNewCategory(category: string): void {
+    console.log(category);
+    if (category) {
+      this.categories = [ category, ...this.categories ];
+    }
+  }
 }
